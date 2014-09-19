@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.mbenchmark"
+    android:versionCode="2"
+    android:versionName="1.1.1" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+    
+    <!-- Required to turn on/off the Bluetooth module -->
+	<uses-permission android:name="android.permission.BLUETOOTH"></uses-permission>
+	<uses-permission android:name="android.permission.BLUETOOTH_ADMIN"></uses-permission>
+	
+	<!-- Required to get the device ID -->
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+	
+	<!-- Required to get GPS informations -->
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission> 
+	
+	<!-- Required to log data -->
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+	
+	<!-- Required when downloading data -->
+	<uses-permission android:name="android.permission.WAKE_LOCK"></uses-permission>
+	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+
+	<!-- Required to get/set WiFi informations -->
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.LISTEN_DATA_CONNECTION_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+	
+	<uses-permission android:name="android.permission.READ_SYNC_SETTINGS"></uses-permission>
+	<uses-permission android:name="android.permission.WRITE_SETTINGS"></uses-permission>
+	
+	<uses-permission android:name="android.permission.READ_LOGS"></uses-permission>    
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        <activity
+            android:name="org.mbenchmark.MainActivity"
+            android:label="@string/app_name"
+            android:configChanges="orientation|screenSize" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="org.mbenchmark.stresstests.YouTubeVideoActivity"
+            android:screenOrientation="landscape"
+        	android:configChanges="orientation|screenSize|keyboardHidden" >
+        </activity>
+        
+        <activity
+        	android:name="org.mbenchmark.stresstests.LocalVideoActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="landscape"
+        	android:configChanges="orientation|screenSize|keyboardHidden">
+        </activity>
+        
+		<service 
+		    android:name="org.mbenchmark.data.LogService"
+		    android:exported="false"
+		    android:enabled="true" >		
+		    <intent-filter>
+				<action android:name="org.morphone.mbenchmark.data.LogService" />
+			</intent-filter>
+		</service>
+		
+		 
+    </application>
+    
+</manifest>

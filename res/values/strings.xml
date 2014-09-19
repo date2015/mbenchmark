@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MBenchmark</string>
+    <string name="action_settings">Settings</string>
+    <string name="start_button">Start stress test</string>
+    <string name="stop_button">Stop stress test</string>
+    <string name="WiFi_not_connected_exception">WiFi is not connected</string>
+    <string name="BT_not_supported_exception">This device does not support bluetooth</string>
+    <string name="Pdev_not_found_exception">No paired bluetooth device found</string>
+    <string name="StressTest_exception">Error instantiating or starting the stress test</string>
+    <string name="init_failure">Initialization failure</string>
+    <string name="pkg_not_found_exception">Package not found</string>
+
+</resources>

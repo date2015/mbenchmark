@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="stress_test_array">
+        <item>WiFi Download</item>
+        <item>WiFi Upload</item>
+        <item>Mobile Data Download</item>
+        <item>Mobile Data Upload</item>
+        <item>Bluetooth Download</item>
+        <item>Bluetooth Upload</item>
+        <item>CPU (Edge Detection)</item>
+        <item>CPU (Integer)</item>
+        <item>Video (Local File - BlackWhite)</item>
+        <item>Video (Local File - RGB1)</item>
+        <item>Video (Local File - RGB2)</item>
+        <item>Video (YouTube)</item>
+    </string-array>
+</resources>

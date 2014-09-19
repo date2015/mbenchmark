@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="large_log_treshold">100</integer>
+    <integer name="log_period">10</integer>
+    <integer name="max_app_to_log">10</integer>
+    <integer name="too_many_zips">10</integer>
+</resources>
